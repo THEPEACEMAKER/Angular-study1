@@ -33,8 +33,9 @@
     </mat-card-content>
 
     <mat-card-actions align="end">
-      <button mat-button color="warn">Reset</button>
-      <button mat-raised-button color="primary" [disabled]="invoiceForm.invalid">
+      <button mat-button color="warn" (click)="invoiceForm.reset()">Reset</button>
+
+      <button mat-raised-button color="primary" [disabled]="invoiceForm.invalid" (click)="saveInvoice()">
         Save Invoice
       </button>
     </mat-card-actions>

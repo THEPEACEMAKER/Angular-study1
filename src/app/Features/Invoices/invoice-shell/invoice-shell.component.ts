@@ -118,4 +118,22 @@ export class InvoiceShellComponent implements OnInit {
     this.invoiceForm.get('grandTotal')?.patchValue(grandTotal, { emitEvent: false });
   });
 }
+
+saveInvoice() {
+  if (this.invoiceForm.valid) {
+    // getRawValue() captures even the disabled fields (Totals and Names)
+    const finalData = this.invoiceForm.getRawValue();
+    
+    console.log('Final Invoice Data:', finalData);
+    
+    // Here is where you would call an API service, e.g.:
+    // this.invoiceService.create(finalData).subscribe(...)
+    
+    alert('Invoice Saved Successfully! Check the console.');
+  } else {
+    // Mark all fields as touched to show validation errors
+    this.invoiceForm.markAllAsTouched();
+    alert('Please fill all required fields.');
+  }
+}
 }

@@ -1,13 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // For pipes like | currency
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MOCK_PRODUCTS, MOCK_SUPPLIERS } from '../Data/mock-data';
 
 @Component({
   selector: 'app-invoice-shell',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
   templateUrl: './invoice-shell.component.html',
-  styleUrl: './invoice-shell.component.scss'
+  styleUrl: './invoice-shell.component.css'
 })
 export class InvoiceShellComponent implements OnInit {
   invoiceForm!: FormGroup;

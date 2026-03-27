@@ -206,6 +206,82 @@ mat-form-field.mat-form-field-disabled {
 }
 
 /* Responsive Design */
+
+/* Large Tablets & Small Laptops (iPad Pro landscape, Galaxy Tab S7 landscape) */
+@media (min-width: 1100px) and (max-width: 1366px) {
+  .desktop-table {
+    th {
+      padding: 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    td {
+      padding: 0.75rem;
+    }
+  }
+
+  .add-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    min-height: 48px;
+
+    mat-icon {
+      font-size: 1.2rem;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}
+
+/* Tablets (iPad Pro portrait, Galaxy Tab S7, narrow devices) */
+@media (min-width: 600px) and (max-width: 1099px) {
+  .desktop-table {
+    display: none;
+  }
+
+  .mobile-cards {
+    display: block;
+  }
+
+  .add-btn {
+    margin-top: 1.5rem;
+    padding: 1.1rem 1.8rem;
+    font-size: 1.05rem;
+    min-height: 48px;
+
+    mat-icon {
+      font-size: 1.25rem;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  .item-card {
+    margin-bottom: 1.2rem;
+
+    mat-card-content {
+      padding: 1.2rem !important;
+    }
+  }
+
+  .card-row {
+    margin-bottom: 1.2rem;
+
+    mat-form-field {
+      min-height: 56px;
+    }
+  }
+
+  .card-row.quantity-price {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .card-row.total-row {
+    padding-top: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .desktop-table {
     display: none;

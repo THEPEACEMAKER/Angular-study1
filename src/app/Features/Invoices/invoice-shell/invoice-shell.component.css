@@ -4,16 +4,93 @@
   justify-content: center;
   background-color: #f8f9fa;
   min-height: 100vh;
+  width: 100%;
 }
 
 .invoice-card {
-  width: 100%;
-  max-width: 1200px;
+  width: clamp(320px, 100%, 1200px);
   margin: 0 auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
 }
+
+/* Responsive Design - Large Tablets & Landscape */
+@media (min-width: 1100px) and (max-width: 1366px) {
+  .invoice-wrapper {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .invoice-card {
+    border-radius: 8px;
+  }
+
+  .invoice-section {
+    padding: 1.25rem 0;
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .invoice-footer {
+    padding: 1.25rem 0;
+
+    .total-display {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* Tablets (iPad, Galaxy Tab, narrow devices) */
+@media (min-width: 600px) and (max-width: 1099px) {
+  .invoice-wrapper {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .invoice-card {
+    border-radius: 12px;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .invoice-section {
+    padding: 1.2rem 0;
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .invoice-footer {
+    padding: 1.2rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .total-display {
+      font-size: 1.3rem;
+    }
+  }
+
+  form {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .invoice-wrapper {
+    padding: 0.5rem;
+  }
+
+  .invoice-card {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
 
 .invoice-section {
   padding: 1.5rem 0;

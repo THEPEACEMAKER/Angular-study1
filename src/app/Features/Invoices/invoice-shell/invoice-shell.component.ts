@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { MOCK_PRODUCTS, MOCK_SUPPLIERS } from '../Data/mock-data';
 import { InvoiceHeaderComponent } from '../Components/invoice-header/invoice-header.component';
 import { InvoiceItemsTableComponent } from '../Components/invoice-items-table/invoice-items-table.component';
@@ -29,6 +30,7 @@ import { CreateInvoiceRequest } from '../Models/invoice.model';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     InvoiceHeaderComponent,
     InvoiceItemsTableComponent,
   ],
